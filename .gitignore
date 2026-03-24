@@ -1,0 +1,24 @@
+# Security & Credentials
+.env
+*.env
+.secrets
+credentials.json
+*.pem
+*.key
+
+# Infrastructure & Terraform (якщо будеш використовувати)
+.terraform/
+*.tfstate
+*.tfvars
+
+# Python & IDE
+__pycache__/
+.venv/
+.idea/
+.vscode/
+
+# MLflow & Local Artifacts
+mlruns/
+*.joblib
+model_binaries/
+
