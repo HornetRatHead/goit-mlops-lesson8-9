@@ -21,7 +21,7 @@ spec:
         env:
         - name: GF_SECURITY_ADMIN_PASSWORD
           value: "admin"
-       resources:
+        resources:
           requests:
             memory: "128Mi"
             cpu: "100m"
