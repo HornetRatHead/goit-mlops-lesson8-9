@@ -23,11 +23,19 @@ spec:
         - ":9001"
         - --address
         - ":9000"
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
         env:
         - name: MINIO_ROOT_USER
           value: "minioadmin"
         - name: MINIO_ROOT_PASSWORD
           value: "minioadmin"
+
         ports:
         - containerPort: 9000
         - containerPort: 9001
@@ -47,11 +55,3 @@ spec:
       targetPort: 9001
   selector:
     app: minio
----
-resources:
-  requests:
-    memory: "256Mi"
-    cpu: "100m"
-  limits:
-    memory: "768Mi"
-    cpu: "500m"

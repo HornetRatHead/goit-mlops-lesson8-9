@@ -18,6 +18,13 @@ spec:
         image: ghcr.io/mlflow/mlflow:v2.11.3
         ports:
         - containerPort: 5000
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "512Mi"
+          limits:
+            cpu: "1000m"
+            memory: "1Gi"
         env:
         - name: MLFLOW_PORT
           value: "5000"
@@ -45,11 +52,3 @@ spec:
       targetPort: 5000
   selector:
     app: mlflow
----
-resources:
-  requests:
-    memory: "512Mi"
-    cpu: "200m"
-  limits:
-    memory: "1Gi"
-    cpu: "1000m"
