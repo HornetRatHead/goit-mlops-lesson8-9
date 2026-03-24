@@ -5,7 +5,7 @@ metadata:
   namespace: application
 spec:
   hard:
-    requests.memory: "4Gi"
-    limits.memory: "5Gi"
+    requests.memory: "5Gi"
+    limits.memory: "7Gi"
     requests.cpu: "3"
-    limits.cpu: "4"
+    limits.cpu: "6"
